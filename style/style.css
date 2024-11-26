@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,*:before,*:after{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "banner banner banner banner"
+    "lft main1 main1 rit"
+    "main2 main2 main2 main2"
+    "side-left side-left main3 main3"
+    "side-left side-left main3 main3"
+    "side-left side-left main3 main3"
+    "lowerContent lowerContent lowerContent lowerContent"
+    "lowerContent lowerContent lowerContent lowerContent"
+    "lowerContent lowerContent lowerContent lowerContent"
+    "lowerContent lowerContent lowerContent lowerContent"
+    "lowerContent lowerContent lowerContent lowerContent"
+    "footer footer footer footer";
+    grid-template-columns:1fr 1fr 4fr 1fr;
+    grid-template-rows: 150px 
+                        575px 
+                        680px 
+                        250px 
+                        1000px
+                        500px 
+                        330px   
+                        800px 
+                        800px
+                        1000px
+                        1000px
+                        800px
+                        500px;
+}
+
+.header{
+    grid-area:header; 
+    /* background-color: rgb(255, 213, 0); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgba(0, 0, 0,.2);
+}
+.header .logo{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+
+}
+
+.header .logo p{
+    /* background-color: red; */
+    font-size: 40px;
+    font-weight: 600;
+    color:#1A4870;
+}
+
+span{
+    color:#5B99C2;
+    font-size:42px;
+}
+
+.header .menu{
+    flex:2;
+    /* background-color: blue; */
+    height:70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header .menu a{
+    position: relative;
+    text-decoration: none;
+    color:rgba(0, 0, 0,0.8);
+    padding:0 10px;
+    
+    /* background-color: blue; */
+}
+
+.header .menu a:after{
+    transition: 0.3s;
+    content: "";
+    position:absolute;
+    background-color: #1A4870;
+    height: 3px;
+    width:0%;
+    left:0;
+    bottom:-10px;
+}
+
+.header .menu a:hover{
+    color:rgba(0, 0, 0,1);
+}
+
+.header .menu a:hover:after{
+    width:100%;
+}
+
+.left{
+    grid-area:lft;
+    background-color: white;
+}
+
+.banner{
+    grid-area:banner;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+.banner div .one{
+    letter-spacing: 3px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.banner div .two{
+    font-size:80px;
+    font-weight: 600;
+}
+
+.banner .thirdText{
+    width:100%;
+}
+
+.banner .text{
+    position:relative;
+} 
+
+.banner .text.first-text{
+    color:black;
+} 
+
+.banner .text.second-text::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    background-color: white;
+    border-left:3px solid #1A4870;
+    animation : typeEffect 4s steps(12) infinite;
+}
+
+@keyframes typeEffect {
+    40%, 60%{
+        left: calc(100% + 5px);
+    }
+    100%{
+        left:0%;
+    }
+}
+
+.right{
+    grid-area:rit;
+    background-color: white;
+}
+
+.main1{
+    grid-area:main1;
+    display: flex;
+    align-items: center;
+    gap:15px;
+    /* background-color: rgb(0, 68, 255); */
+}
+
+.intro{
+    height: 80%;
+    width:50%;
+    display: grid;
+    align-items: center;
+}
+
+.intro .about{
+    font-size: 50px;
+    font-weight: 700;
+    
+}
+
+.intro .description{
+    font-size: 18px;
+    color:rgba(0, 0, 0,.5);
+}
+
+.intro .button-cv button{
+    width:500px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: white;
+    color: rgba(26, 72, 112,1);
+    font-weight: 600;
+    border: 3px solid rgba(42,100,150,1);
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.intro .button-cv button:hover{
+    background-color: rgba(42,100,150,1);
+    color: white;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+.intro .table-of-info{
+    font-size: 18px;
+}
+
+.intro .table-of-info table td{
+    padding:5px;
+    background-color: white;
+    text-align: left;
+}
+
+td.h{
+    font-weight: 600;
+}
+
+td.d{
+    color:rgba(0, 0, 0,.5);
+}
+
+.profile-photo{
+    height: 100%;
+    width:50%;
+    background-image: url(../Images/Thanush.png);
+    background-size: cover;
+}
+
+
+
+.main2{
+    grid-area:main2;
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.main2 img{
+    height: 100px;
+    filter:grayscale(10%);
+}
+.side-left{
+    grid-area:side-left;
+
+
+}
+.side-left .sidebar-fix{
+    grid-area:side-left;
+    display: flex;
+    /* align-items: start; */
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-top: 70px;
+    position: sticky;
+    top:90px; 
+    margin-bottom:40px;
+}
+
+.side-left .sidebar-fix a{
+    margin-left: 120px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    color:#1A4870;
+    font-size: 18px;
+}
+
+
+.main3{
+    grid-area:main3;
+    /* background-color: rgb(0, 68, 255); */
+    display: grid;
+    grid-template-areas: 
+    "edu"
+    "ex"
+    "cert";
+    grid-template-rows:600px 460px 720px;
+
+}
+.main3 .f{
+    margin-bottom: -45px;
+    border-bottom: 2px solid rgb(143, 140, 140);
+}
+.main3 div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    }
+
+.main3 .year{
+    color:#5B99C2;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+
+.main3 .heading{
+    color: #5B99C2;
+    font-size:35px;
+    font-weight: 700;
+    padding-top: 50px;
+}
+
+.main3 .title{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.main3 .school{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.main3 .description-about{
+    text-align: left;
+    color:rgb(102, 97, 97);
+    padding-bottom: 10px;
+}
+
+
+.main3.edu{
+    grid-area: edu;
+}
+
+.main3.ex{
+    grid-area: ex;
+}
+
+.main3.cert{
+    grid-area: cert;
+}
+
+.main3.ski{
+    grid-area: ski;
+}
+
+.main3.pro{
+    grid-area: pro;
+}
+.lowerContent{
+    grid-area:lowerContent;
+    display: grid;
+    grid-template-areas: 
+    "Projects"
+    "Licenses-Certifications"
+    "Events-on-AIESEC"
+    "Skills";
+    grid-template-rows: 5fr 2fr 5fr 1fr;
+}
+
+.lowerContent .projects{
+    grid-area: Projects;
+}
+
+.lowerContent .main-title{
+    font-size: 45px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.second-title{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+
+    color:#5B99C2;
+    margin:40px auto 10px;
+}
+
+.about-event{
+    text-align: justify;
+    padding:0 40px;
+    color:rgb(139, 130, 130);
+}
+
+.project-description{
+    text-align: justify;
+    color:rgb(139, 130, 130);
+    padding:10px 40px;
+}
+
+.album{
+    height:65%;
+    width:100%;
+    display: grid;
+    grid-template-areas: 
+    "photo1 photo5 photo3"
+    "photo4 photo6 photo2";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:01px;
+    padding-top: 10px;
+}
+
+.lowerContent .projects .album .photo1{
+    grid-area: photo1;
+    background-image: url(../Images/Projects/1.jpeg);
+    background-position: center top;
+}
+
+.lowerContent .projects .album .photo2{
+    grid-area: photo2;
+    background-image: url(../Images/Projects/2.jpeg);
+    background-position: center top;
+}
+.lowerContent .projects .album .photo3{
+    grid-area: photo3;
+    background-image: url(../Images/Projects/3.jpeg);
+    background-position: center top;
+}
+.lowerContent .projects .album .photo4{
+    grid-area: photo4;
+    background-image: url(../Images/Projects/4.jpeg);
+    background-position: center top;
+}
+.lowerContent .projects .album .photo5{
+    grid-area: photo5;
+    background-image: url(../Images/Projects/5.jpeg);
+    background-position: center top;
+}
+.lowerContent .projects .album .photo6{
+    grid-area: photo6;
+    background-image: url(../Images/Projects/6.jpeg);
+    background-position: center top;
+}
+
+.lowerContent .projects .album .foto{
+    opacity: .9;
+    filter: grayscale(20%);
+    background-size:130%;
+    transition: 0.5s;
+    
+}
+
+.lowerContent .projects .album .foto:hover{
+    opacity: 1;
+    background-size:100%;
+    filter: grayscale(0%);
+}
+
+.licenses-certifications .main-title{
+    margin-top: 100px;
+}
+
+.licenses-certifications .certificates{
+    width:100%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-c{
+    display:grid;
+    grid-template-areas: 
+    "certificate1 certificate2"
+    "certificate3 certificate4";
+    grid-template-rows: 260px 260px;
+    grid-template-columns: 370px 370px;
+    gap:15px;
+    padding-top: 10px;
+    
+}
+.cerft{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: .3s;
+}
+
+
+.certificate1{
+    grid-area: certificate1;
+    background-color: rgb(0, 72, 255);
+    background-image: url(../Images/l&c/1.jpeg);
+    background-size: cover;
+}
+
+.certificate2{
+    grid-area: certificate2;
+    background-color: aqua;
+    background-image: url(../Images/l&c/2.jpg);
+    background-size: cover;
+}
+
+.certificate3{
+    grid-area: certificate3;
+    background-color: lightskyblue;
+    background-image: url(../Images/l&c/3.png);
+    background-size: cover;
+}
+
+.certificate4{
+    grid-area: certificate4;
+    background-color: rgb(12, 155, 212);
+    background-image: url(../Images/l&c/4.jpeg);
+    background-size: cover;
+}
+
+
+
+
+
+
+.lowerContent .events-on-aiesec{
+    grid-area: Events-on-AIESEC;
+}
+
+.photoG{
+    width:100%;
+    height:550px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    transition: all ease .3s;
+}
+
+
+.pic{
+    width:300px;
+    height:100%;
+    flex:1;
+    transition: all ease .3s;
+    background-size: 120%;
+    
+}
+
+.pic:hover{
+    background-size: 100%;
+}
+
+.photoG1{
+    background-color:blue;
+    background-image: url(../Images/evA/1.jpeg);
+
+}
+.photoG2{
+    background-color: green;
+    background-image: url(../Images/evA/2.jpeg);
+}
+
+.photoG3{
+    background-color:blue;
+    background-image: url(../Images/evA/3.jpeg);
+}
+.photoG4{
+    background-color: green;
+    background-image: url(../Images/evA/4.jpeg);
+}
+
+
+
+.lowerContent .skills{
+    grid-area: Skills;
+}
+
+.skills .main-title{
+    margin-top: 100px;
+}
+
+.album2 , .album3{
+    width:100%;
+    height: 650px;
+    display: grid;
+    grid-template-areas: 
+    "photo1 photo5 photo3"
+    "photo4 photo6 photo2";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:01px;
+}
+
+.album2 .foto{
+    background-size:100%;
+    background-position: center top;
+}
+
+.album2 .foto{
+    opacity: .9;
+    filter: grayscale(20%);
+    background-size:130%;
+    transition: 0.5s;
+    
+}
+
+.album2 .foto:hover{
+    opacity: 1;
+    background-size:100%;
+    filter: grayscale(0%);
+}
+
+.program2 .album2 .photo1{
+    grid-area: photo1;
+    background-color: blue;
+    background-image: url(../Images/fusion/1.jpeg);
+}
+
+.program2 .album2 .photo2{
+    grid-area: photo2;
+    background-color: blue;
+    background-image: url(../Images/fusion/2.jpeg);
+}
+.program2 .album2 .photo3{
+    grid-area: photo3;
+    background-color: blue;
+    background-image: url(../Images/fusion/3.jpeg);
+}
+.program2 .album2 .photo4{
+    grid-area: photo4;
+    background-color: blue;
+    background-image: url(../Images/fusion/4.jpeg);
+    background-position: center top;
+}
+.program2 .album2 .photo5{
+    grid-area: photo5;
+    background-color: blue;
+    background-image: url(../Images/fusion/5.jpeg);
+}
+.program2 .album2 .photo6{
+    grid-area: photo6;
+    background-color: blue;
+    background-image: url(../Images/fusion/6.jpeg);
+}
+
+.album3 .photo1{
+    grid-area: photo1;
+    background-color: blue;
+    background-image: url(../Images/x/1.jpeg);
+}
+
+.album3 .photo2{
+    grid-area: photo2;
+    background-color: blue;
+    background-image: url(../Images/x/2.jpeg);
+}
+
+.album3 .photo3{
+    grid-area: photo3;
+    background-color: blue;
+    background-image: url(../Images/x/3.jpeg);
+}
+
+.album3 .photo4{
+    grid-area: photo4;
+    background-color: blue;
+    background-image: url(../Images/x/4.jpeg);
+}
+
+.album3 .photo5{
+    grid-area: photo5;
+    background-color: blue;
+    background-image: url(../Images/x/5.jpeg);
+}
+
+.album3 .photo6{
+    grid-area: photo6;
+    background-color: blue;
+    background-image: url(../Images/x/6.jpeg);
+}
+
+.footer{
+    padding-top:5px;
+    background-color: rgb(0, 10, 48);
+    grid-area:footer;
+    display: grid;
+    grid-template-areas: 
+    'left-footer rigth-footer'
+    'total-footer total-footer';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70%
+                        30%;
+}
+
+.footer .left-footer{
+    grid-area:left-footer;
+}
+
+.footer .left-footer .inside-left-footer{
+    margin:35px auto ;
+    width:85%;
+    height: 80%;
+    display: grid;
+    grid-template-areas: 
+    'column-1 column-2 column-3';
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 100%;
+    gap:15px;
+    align-items: first baseline;
+    justify-items: center;
+    padding-top:30px;
+}
+
+.footer .left-footer .inside-left-footer .column-1{
+    grid-area:column-1;
+    
+}
+
+.footer .left-footer .inside-left-footer .column-2{
+    grid-area:column-2;
+    
+}
+.footer .left-footer .inside-left-footer .column-3{
+    grid-area:column-3;
+    
+}
+.footer .right-footer{
+    grid-area:rigth-footer;
+    
+    
+}
+
+.footer .right-footer .subscribe{
+    padding-top: 60px;
+}
+
+.footer .right-footer .subscribe input{
+    width: 400px;
+    height: 50px;
+    border:3px solid rgba(25, 130, 101,0.8) ;
+    outline: none;
+    border-radius: 5px;
+    padding-left:10px;
+    font-size:14px;
+    
+}
+
+.footer .right-footer .subscribe input:focus{
+    border: 3px solid rgba(25,130,101,1);
+}
+
+.footer .right-footer .subscribe button{
+    width: 120px;
+    height: 50px;
+    background-color: rgb(218,114,60);
+    border-radius: 5px;
+    color:white;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.footer .right-footer .subscribe button:hover{
+    background-color: rgb(213, 86, 18);
+}
+
+.footer .footer-head{
+    color:white;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.footer .thing{
+    color:rgba(255, 255, 255,.5);
+    text-align: left;
+}
+
+.footer .total-footer{
+    grid-area:total-footer;
+    background-color: aqua;
+}
+
+.social-icon{
+    width:200px;
+    padding: 10px;
+}
+
+.box{
+    /*padding:5px;*/
+    text-align: center;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+
