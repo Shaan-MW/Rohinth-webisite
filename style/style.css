@@ -676,7 +676,7 @@ td.d{
 
 .footer{
     padding-top:5px;
-    background-color: rgb(0, 10, 48);
+    background-color: rgb(0, 0, 0);
     grid-area:footer;
     display: grid;
     grid-template-areas: 
@@ -732,7 +732,7 @@ td.d{
 .footer .right-footer .subscribe input{
     width: 400px;
     height: 50px;
-    border:3px solid rgba(25, 130, 101,0.8) ;
+    border:3px solid gray ;
     outline: none;
     border-radius: 5px;
     padding-left:10px;
@@ -741,7 +741,7 @@ td.d{
 }
 
 .footer .right-footer .subscribe input:focus{
-    border: 3px solid rgba(25,130,101,1);
+    border: 3px solid rgba(128, 128, 128,.6);
 }
 
 .footer .right-footer .subscribe button{
@@ -776,13 +776,115 @@ td.d{
 }
 
 .social-icon{
-    width:200px;
+    width:522px;
+    height: 100px;
+    background-color: white;
     padding: 10px;
+    margin-left: 119px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.insta_logo_foot{
+    height: 50px;
+}
+
+.link_logo_foot{
+    height: 50px;
+    border-radius: 5px;
+}
+
+.fb_logo_foot{
+    margin-top:-8px;
+    height: 68px;
+    border-radius: 5px;
+}
+
+.thread_logo_foot{
+    /*margin-top:-8px;*/
+    height: 52px;
+    border-radius: 5px;
+}
+
+.call_logo_foot{
+    /*margin-top:-8px;*/
+    height: 52px;
+    border-radius: 5px;
+}
+
+.gmail_logo_foot{
+    /*margin-top:-8px;*/
+    height: 55px;
+    width:60px;
+    border-radius: 5px;
+}
+
+.bi{
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    
+}
+
+.bi-facebook{
+    color: #316FF6;
+    color: white;
+}
+
+.bi-facebook:hover{
+    color: #316FF6;
+    border-radius: 25px;
+    border:0px ;
+    /* color: white; */
+    transition: 0.2s;
+    transform: scaleY(-10px);
+}
+
+.bi-linkedin{
+    color:#0077B5;
+    color: white;
+    border:;
+}
+
+.bi-linkedin:hover{
+    color:#0077B5;
+    /* background-color: white; */
+    /* color: white; */
+    transition: 0.2s;
+}
+
+.bi-instagram{
+    
+    /* background: linear-gradient(to bottom right, #FD1D1D, #F56040, #F56040, #FCAF45, #FFDC80);
+    */border-radius: 15px; 
+    background-color: black;
+    color: white;
+}
+
+.bi-threads{
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+
+.bi-telephone{
+    color:white;
+    width: 35px;
+}
+
+.bi-envelope-at{
+    color: white;
+    width:35px;
 }
 
 .box{
     /*padding:5px;*/
-    text-align: center;
+    text-align:center;
 }
 
 html{
