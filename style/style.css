@@ -84,8 +84,6 @@ span{
     text-decoration: none;
     color:rgba(0, 0, 0,0.8);
     padding:0 10px;
-    
-    /* background-color: blue; */
 }
 
 .header .menu a:after{
@@ -845,7 +843,6 @@ td.d{
 .bi-linkedin{
     color:#0077B5;
     color: white;
-    border:;
 }
 
 .bi-linkedin:hover{
